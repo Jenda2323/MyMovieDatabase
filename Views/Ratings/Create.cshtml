@@ -1,0 +1,17 @@
+﻿@model MovieProject.DTO.RatingDTO;
+
+<div>
+    <form asp-action="Create">
+        <h4>Make new Rating</h4>
+        <div class="form-group">
+            <label class="control-label" asp-for="MovieId"></label>
+            <select class="form-control" asp-for="MovieId" asp-items="ViewBag.Ratings"></select>
+
+            <label asp-for="Score"></label>
+            <input type="number" asp-for="Score" min="1" max="5" placeholder="Score(1-5 stars)" class="form-control" />
+        </div>
+        <div>
+            <input class="btn btn-success" type="submit" value="Create" />
+        </div>
+    </form>
+</div>

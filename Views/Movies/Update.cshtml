@@ -1,0 +1,19 @@
+﻿@using MovieProject.DTO
+@model MovieDTO
+<form asp-action="Update">
+    <div class="form-group">
+        <label asp-for="@Model Title"> </label>
+        <input type="text" asp-for="Title" class="form-control" />
+
+
+        <label asp-for="Director"> </label>
+        <input type="text" asp-for="Director" class="form-control" />
+
+        <label asp-for="Genre"> </label>
+        <input type="text" asp-for="Genre" class="form-control" />
+
+        <label asp-for="ReleaseDate"> </label>
+        <input type="number" asp-for="ReleaseDate" class="form-control" />
+    </div>
+    <input type="submit" class="btn btn-success" value="Update" />
+</form>

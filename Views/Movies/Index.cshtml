@@ -1,0 +1,120 @@
+﻿@using MovieProject.DTO
+@model IEnumerable<MovieDTO>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Movies List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .movie-item {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+            .movie-item h5 {
+                font-size: 1.5rem;
+                margin-bottom: 5px;
+            }
+
+            .movie-item h6 {
+                font-size: 1rem;
+                margin-bottom: 5px;
+            }
+
+            .movie-item p {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+            }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            flex: 1;
+            padding-bottom: 60px; /* Space for the footer */
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 5px 0;
+            border-top: 1px solid #e7e7e7;
+            font-size: 0.8rem;
+            line-height: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <h1 class="my-4">Movies List</h1>
+            <div class="d-flex justify-content-between mb-3">
+                <a class="btn btn-info mb-4" asp-action="Create">Create New Movie</a>
+                <div class="input-group w-50">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search Movies">
+                </div>
+            </div>
+            <div id="movieList">
+                @foreach (var movie in Model)
+                {
+                    <div class="movie-item">
+                        <h5>@movie.Title</h5>
+                        <h6>Director: @movie.Director</h6>
+                        <h6>Genre: @movie.Genre</h6>
+                        <p>Release Date: @movie.ReleaseDate</p>
+                        <div class="btn-container">
+                            <a class="btn btn-warning" asp-action="Update" asp-route-id="@movie.Id">Edit</a>
+                            <form method="post">
+                                <button type="submit" class="btn btn-danger" asp-action="Delete" asp-route-id="@movie.Id">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 - MovieProject - Privacy
+    </footer>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function () {
+            var input, filter, movieList, movieItems, title, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toLowerCase();
+            movieList = document.getElementById('movieList');
+            movieItems = movieList.getElementsByClassName('movie-item');
+
+            for (i = 0; i < movieItems.length; i++) {
+                title = movieItems[i].getElementsByTagName('h5')[0];
+                if (title) {
+                    txtValue = title.textContent || title.innerText;
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                        movieItems[i].style.display = "";
+                    } else {
+                        movieItems[i].style.display = "none";
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

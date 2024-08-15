@@ -1,0 +1,17 @@
+﻿@using MovieProject.DTO
+@model RatingDTO;
+<div>
+    <form asp-action="Update" method="post">
+        <h4>Edit your Rating</h4>
+        <div class="form-group">
+            <label class="control-label" asp-for="MovieId"></label>
+            <select class="form-control" asp-for="MovieId" asp-items="ViewBag.Ratings"></select>         
+
+            <label asp-for="Score"></label>
+            <input type="number" asp-for="Score" min="1" max="5" placeholder="Score" class="form-control" />
+        </div>
+        <div>
+            <input class="btn btn-success" type="submit" value="Update" />
+        </div>
+    </form>
+</div>

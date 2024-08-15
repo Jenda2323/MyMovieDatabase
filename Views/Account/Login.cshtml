@@ -1,0 +1,57 @@
+﻿@using MovieProject.ViewModels
+
+@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1 class="text-center my-4">Login</h1>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="alert alert-info text-center">
+                <p>For initial login, please use the following credentials:</p>
+                <a href="#" id="showCredentials" class="btn btn-info">Click here to view initial login credentials</a>
+                <div id="credentialsInfo" class="mt-3" style="display: none;">
+                    <div class="alert alert-warning">
+                        <p><strong>Username:</strong> host</p>
+                        <p><strong>Password:</strong> Abcd1234</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-danger text-center" asp-validation-summary="All"></div>
+
+            <form asp-action="Login" method="post" class="mt-4">
+                <input type="hidden" asp-for="ReturnUrl" />
+                <div class="form-group">
+                    <label asp-for="Username" class="form-label"></label>
+                    <input asp-for="Username" class="form-control" placeholder="Enter your username" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password" class="form-control" type="password" placeholder="Enter your password" />
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" asp-for="Remember" class="form-check-input" />
+                    <label asp-for="Remember" class="form-check-label">Remember me</label>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-block" type="submit">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#showCredentials').click(function (e) {
+                e.preventDefault();
+                $('#credentialsInfo').slideToggle();
+            });
+        });
+    </script>
+}

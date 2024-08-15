@@ -1,0 +1,81 @@
+﻿@model IEnumerable<AppUser>
+@{
+    ViewData["Title"] = "All Users";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">All Users</h1>
+
+    <div class="d-flex justify-content-between mb-3">
+        <a asp-action="Create" class="btn btn-secondary">Create a User</a>
+        <div class="input-group w-25">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search Users">
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered text-center">
+            <thead class="thead-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+                @foreach (AppUser user in Model)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.UserName</td>
+                        <td>@user.Email</td>
+                        <td>
+                            <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@user.Id">Update</a>
+                            <form asp-action="Delete" asp-route-id="@user.Id" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function () {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toLowerCase();
+            table = document.getElementById('userTable');
+            tr = table.getElementsByTagName('tr');
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName('td');
+                if (td.length > 0) {
+                    txtValue = "";
+                    for (var j = 0; j < td.length; j++) {
+                        if (td[j]) {
+                            txtValue += td[j].textContent || td[j].innerText;
+                        }
+                    }
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        });
+    </script>
+}
+
+<style>
+    .table thead th {
+        background-color: #f8f9fa;
+    }
+    .table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+</style>

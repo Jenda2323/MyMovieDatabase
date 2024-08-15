@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArfPCNWA8Tkm/141M7DUgWwAAAAACAAAAAAAQZgAAAAEAACAAAAAIzalCtS95yY8zJ11zip9HZwpM2J5SIt1lvr0TZJ14fgAAAAAOgAAAAAIAACAAAADVC9j/n+ZYrhAs5OF7H4DfM79NiffG8wpcAvPBj7EY8CAAAAB7n/ENP0GP1TlivRr+GUk2lde8v5rjjPpTRfNQjNpYd0AAAAB8fuvsImEKi5m7azaQDnqShvdnK0qTeD1iuYrLvsiWKtcYPbcqLUVqiYNcUFuI/Y9oPIAHc/EzK1ufUP+z79Zs</EncryptedPassword>
+    <History>False|2024-07-04T13:15:15.5056212Z||;False|2024-07-04T15:14:57.8662101+02:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="MonsterAspDbConnection">
+      <Value>Server=db6294.databaseasp.net%3b Database=db6294%3b User Id=db6294%3b Password=Gz2+9_wC%40xS6%3b Encrypt=False%3b MultipleActiveResultSets=True%3b </Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
