@@ -5,6 +5,7 @@ using MovieProject.Models;
 
 namespace MovieProject.Controllers
 {
+    [Authorize]
     public class RolesController : Controller
     {
         private RoleManager<IdentityRole> _roleManager;

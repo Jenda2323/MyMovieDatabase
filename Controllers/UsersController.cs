@@ -9,7 +9,7 @@ using MovieProject.ViewModels;
 
 namespace MovieProject.Controllers
 {  
-    //[Authorize(Roles ="Admin")]
+    [Authorize]
     public class UsersController : Controller
     {
         private UserManager<AppUser> _userManager;

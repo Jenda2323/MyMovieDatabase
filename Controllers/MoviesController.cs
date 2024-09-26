@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MovieProject.DTO;
 using MovieProject.Services;
 
 namespace MovieProject.Controllers
+
 {
+    [Authorize]
     public class MoviesController : Controller
     {
         private MovieService _movieService;
@@ -43,16 +46,34 @@ namespace MovieProject.Controllers
             }
             return View(movieToEdit);
         }
+        
+        [HttpPost]
+        
         public async Task<ActionResult> Delete(int id)
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                Console.WriteLine("Uživatel není přihlášen.");
+                return RedirectToAction("AccessDenied", "Account");
+            }
+
+            if (!User.IsInRole("Admin"))
+            {
+                Console.WriteLine("Uživatel nemá roli Admin.");
+                return RedirectToAction("AccessDenied", "Account");
+            }
+
             var movieToDelete = await _movieService.GetByIdAsync(id);
             if (movieToDelete == null)
             {
                 return View("NotFound");
             }
+
             await _movieService.DeleteAsync(id);
             return RedirectToAction("Index");
         }
+
+
 
     }
 }

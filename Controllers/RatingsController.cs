@@ -6,6 +6,7 @@ using MovieProject.Services;
 
 namespace MovieProject.Controllers
 {
+    [Authorize]
     public class RatingsController : Controller
     {
         private RatingService _ratingService;

@@ -21,7 +21,7 @@
                     <h5 class="card-title"> @item.MovieName</h5>
                     <p class="card-text">Rating: @item.AverageScore</p>
                     <a href="@Url.Action("Update", "Ratings", new { id = item.Id })" class="btn btn-warning">Edit</a>
-                    <form method="post" action="@Url.Action("Delete", "Ratings", new { id = item.Id })" class="d-inline">
+                    <form method="post" action="@Url.Action("Delete", "Ratings", new { id = item.Id })" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this movie?')" ;>
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </div>

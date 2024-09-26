@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieProject.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MovieProject.bundle.scp.css"
+      "PackagePath": "staticwebassets\\MovieProject.147tu9ssj1.bundle.scp.css"
     },
     {
       "Id": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\css\\site.css",
@@ -11,6 +11,10 @@
     {
       "Id": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\images\\movie.jpg",
+      "PackagePath": "staticwebassets\\images\\movie.jpg"
     },
     {
       "Id": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\js\\site.js",
@@ -243,6 +247,10 @@
     {
       "Id": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MovieProject.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MovieProject.Microsoft.AspNetCore.StaticWebAssets.props",
