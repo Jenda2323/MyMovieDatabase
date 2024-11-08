@@ -24,6 +24,42 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 27 Jun 2024 19:27:44 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovieProject/fonts/Shot.76a0qtrjcw.ttf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\Shot.ttf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"76a0qtrjcw"},{"Name":"integrity","Value":"sha256-gW7PCUu5zJ2pctQDtEFsmAZOzsdlqNXL7SKY3KSBXw8="},{"Name":"label","Value":"_content/MovieProject/fonts/Shot.ttf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1017860"},{"Name":"Content-Type","Value":"application/x-font-ttf"},{"Name":"ETag","Value":"\u0022gW7PCUu5zJ2pctQDtEFsmAZOzsdlqNXL7SKY3KSBXw8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Sep 2021 13:24:08 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovieProject/fonts/Shot.ttf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\Shot.ttf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gW7PCUu5zJ2pctQDtEFsmAZOzsdlqNXL7SKY3KSBXw8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1017860"},{"Name":"Content-Type","Value":"application/x-font-ttf"},{"Name":"ETag","Value":"\u0022gW7PCUu5zJ2pctQDtEFsmAZOzsdlqNXL7SKY3KSBXw8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Sep 2021 13:24:08 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovieProject/fonts/Undeveloped.4ths64fb7q.ttf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\Undeveloped.ttf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4ths64fb7q"},{"Name":"integrity","Value":"sha256-2LAJ5wcOgMmzPgd7r1JAXtoAqfVikZGAIbkrPQqZqKc="},{"Name":"label","Value":"_content/MovieProject/fonts/Undeveloped.ttf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"203852"},{"Name":"Content-Type","Value":"application/x-font-ttf"},{"Name":"ETag","Value":"\u00222LAJ5wcOgMmzPgd7r1JAXtoAqfVikZGAIbkrPQqZqKc=\u0022"},{"Name":"Last-Modified","Value":"Thu, 04 Oct 2018 16:07:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovieProject/fonts/Undeveloped.ttf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\Undeveloped.ttf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2LAJ5wcOgMmzPgd7r1JAXtoAqfVikZGAIbkrPQqZqKc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"203852"},{"Name":"Content-Type","Value":"application/x-font-ttf"},{"Name":"ETag","Value":"\u00222LAJ5wcOgMmzPgd7r1JAXtoAqfVikZGAIbkrPQqZqKc=\u0022"},{"Name":"Last-Modified","Value":"Thu, 04 Oct 2018 16:07:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovieProject/fonts/UndevelopedBook.ttf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\UndevelopedBook.ttf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-CSmmpx2feCfj17hE4xIn3PHuOhPS8oI3v/vlOhAMT54="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"198096"},{"Name":"Content-Type","Value":"application/x-font-ttf"},{"Name":"ETag","Value":"\u0022CSmmpx2feCfj17hE4xIn3PHuOhPS8oI3v/vlOhAMT54=\u0022"},{"Name":"Last-Modified","Value":"Thu, 04 Oct 2018 16:09:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovieProject/fonts/UndevelopedBook.vqrag3nrpd.ttf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\UndevelopedBook.ttf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vqrag3nrpd"},{"Name":"integrity","Value":"sha256-CSmmpx2feCfj17hE4xIn3PHuOhPS8oI3v/vlOhAMT54="},{"Name":"label","Value":"_content/MovieProject/fonts/UndevelopedBook.ttf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"198096"},{"Name":"Content-Type","Value":"application/x-font-ttf"},{"Name":"ETag","Value":"\u0022CSmmpx2feCfj17hE4xIn3PHuOhPS8oI3v/vlOhAMT54=\u0022"},{"Name":"Last-Modified","Value":"Thu, 04 Oct 2018 16:09:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MovieProject/images/movie.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\movie.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

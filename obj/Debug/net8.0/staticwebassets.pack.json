@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\Shot.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Shot.ttf"
+    },
+    {
+      "Id": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\Undeveloped.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Undeveloped.ttf"
+    },
+    {
+      "Id": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\UndevelopedBook.ttf",
+      "PackagePath": "staticwebassets\\fonts\\UndevelopedBook.ttf"
+    },
+    {
       "Id": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\images\\movie.jpg",
       "PackagePath": "staticwebassets\\images\\movie.jpg"
     },

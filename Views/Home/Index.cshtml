@@ -1,64 +1,62 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="container-fluid bg-light vh-100 d-flex justify-content-center align-items-center position-relative">
-    <div class="background-text">
-        MyMovieDatabase
-    </div>
-    <div class="text-center p-5 bg-white rounded shadow-lg">
-        <h1 class="display-4">Hello, <span class="text-primary">@Model</span>!</h1>
-        @if (User?.Identity?.IsAuthenticated ?? false)
-        {
-            <a asp-controller="Account" asp-action="Logout" class="btn btn-danger mt-3">Logout</a>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            background-color: rgba(194, 183, 172) !important;
         }
-    </div>
+
+            .navbar .navbar-brand-custom {
+                font-size: 2rem;
+            }
+        .text-center {
+            border-radius: 20px;
+            background-color: rgba(159, 162, 150, 0.97);
+            box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.9);
+        }
+
+        .text-primary {
+            color: #007bff;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+            .btn-danger:hover {
+                background-color: #c82333;
+                border-color: #bd2130;
+            }
+
+        body {
+            font-family: 'Shot', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Shot';
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    </head>
+    <body> 
+
+<div class="text-center p-5 " >
+    <h1 class="display-4">Hello, <span class="text-primary">@Model</span>!</h1>
+    @if (User?.Identity?.IsAuthenticated ?? false)
+    {
+        <a asp-controller="Account" asp-action="Logout" class="btn btn-danger mt-3">Logout</a>
+    }
 </div>
+</body>
+</html>
 
-<style>
-    .bg-light {
-        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-        position: relative;
-        overflow: hidden;
-    }
 
-    .bg-white {
-        background-color: #ffffff;
-    }
-
-    .rounded {
-        border-radius: .25rem;
-    }
-
-    .shadow-lg {
-        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
-    }
-
-    .text-primary {
-        color: #007bff;
-    }
-
-    .btn-danger {
-        background-color: #dc3545;
-        border-color: #dc3545;
-    }
-
-        .btn-danger:hover {
-            background-color: #c82333;
-            border-color: #bd2130;
-        }
-
-    .background-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 10rem;
-        font-weight: bold;
-        color: rgba(0, 123, 255, 0.1); 
-        white-space: nowrap;
-        pointer-events: none; 
-        z-index: -1; 
-    }
-</style>
+  
 

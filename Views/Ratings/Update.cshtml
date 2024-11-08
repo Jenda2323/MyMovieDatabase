@@ -1,17 +1,67 @@
 ﻿@using MovieProject.DTO
 @model RatingDTO;
-<div>
-    <form asp-action="Update" method="post">
-        <h4>Edit your Rating</h4>
-        <div class="form-group">
-            <label class="control-label" asp-for="MovieId"></label>
-            <select class="form-control" asp-for="MovieId" asp-items="ViewBag.Ratings"></select>         
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update rating</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @@font-face {
+            font-family: 'UndevelopedFont';
+            src: url('/fonts/Undeveloped.ttf') format('truetype');
+        }
 
-            <label asp-for="Score"></label>
-            <input type="number" asp-for="Score" min="1" max="5" placeholder="Score" class="form-control" />
-        </div>
-        <div>
-            <input class="btn btn-success" type="submit" value="Update" />
-        </div>
-    </form>
-</div>
+        .navbar {
+            background-color: rgba(194, 183, 172) !important;
+        }
+
+        .navbar .navbar-brand-custom {
+                font-size: 2rem;
+        }
+        body {
+            background-image: url('/images/movie.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .content {
+            flex: 1;
+            padding-bottom: 60px;
+            background-color: rgba(194, 183, 172, 0.95);
+            border-radius: 20px;
+            box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            font-family: 'UndevelopedFont';
+            font-size: 5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            font-size: 1.5rem;
+            border-radius: 5px;
+            padding: 10px;          
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <form asp-action="Update" method="post">
+            <h4>Edit Your Rating</h4>
+            <div class="form-group">
+                <label class="control-label">Movie Name</label>
+                <select class="form-control" asp-for="MovieId" asp-items="ViewBag.Ratings"></select>
+
+                <label asp-for="Score">Score</label>
+                <input type="number" asp-for="Score" min="1" max="5" placeholder="Score" class="form-control" />
+            </div>
+            <div>
+                <input class="btn btn-success" type="submit" value="Save" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,5 +1,56 @@
 ﻿@using MovieProject.DTO
 @model MovieDTO
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update movie</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        @@font-face {
+            font-family: 'UndevelopedFont';
+            src: url('/fonts/Undeveloped.ttf') format('truetype');
+        }
+
+        .navbar {
+            background-color: rgba(194, 183, 172) !important;
+        }
+
+        .navbar .navbar-brand-custom {
+                font-size: 2rem;
+        }
+        body {
+            background-image: url('/images/movie.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .content {
+            flex: 1;
+            padding-bottom: 60px;
+            background-color: rgba(194, 183, 172, 0.95);
+            border-radius: 20px;
+            box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            font-family: 'UndevelopedFont';
+            font-size: 5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            font-size: 1.5rem; 
+            border-radius: 5px; 
+            padding: 10px; 
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h1>Update Movie</h1>
 <form asp-action="Update">
     <div class="form-group">
         <label asp-for="Title"> </label>
@@ -15,5 +66,8 @@
         <label asp-for="ReleaseDate"> </label>
         <input type="number" asp-for="ReleaseDate" class="form-control" />
     </div>
-    <input type="submit" class="btn btn-success" value="Update" />
+    <input type="submit" class="btn btn-success" value="Save" />
 </form>
+</div>
+</body>
+</html>

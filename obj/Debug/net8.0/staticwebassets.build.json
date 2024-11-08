@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sbCFpWnEvAqc/Od+aR8jhnkSjzjczN3Avp8yOwC8uLs=",
+  "Hash": "Ck0Cp4cAs66YDqj29uYJXK667dKHTI2QdGq3ixs4qYo=",
   "Source": "MovieProject",
   "BasePath": "_content/MovieProject",
   "Mode": "Default",
@@ -99,6 +99,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\Shot.ttf",
+      "SourceId": "MovieProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\",
+      "BasePath": "_content/MovieProject",
+      "RelativePath": "fonts/Shot#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "76a0qtrjcw",
+      "Integrity": "gW7PCUu5zJ2pctQDtEFsmAZOzsdlqNXL7SKY3KSBXw8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\Shot.ttf"
+    },
+    {
+      "Identity": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\Undeveloped.ttf",
+      "SourceId": "MovieProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\",
+      "BasePath": "_content/MovieProject",
+      "RelativePath": "fonts/Undeveloped#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4ths64fb7q",
+      "Integrity": "2LAJ5wcOgMmzPgd7r1JAXtoAqfVikZGAIbkrPQqZqKc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\Undeveloped.ttf"
+    },
+    {
+      "Identity": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\UndevelopedBook.ttf",
+      "SourceId": "MovieProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\",
+      "BasePath": "_content/MovieProject",
+      "RelativePath": "fonts/UndevelopedBook#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vqrag3nrpd",
+      "Integrity": "CSmmpx2feCfj17hE4xIn3PHuOhPS8oI3v/vlOhAMT54=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\UndevelopedBook.ttf"
     },
     {
       "Identity": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\images\\movie.jpg",
@@ -1502,6 +1565,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/Shot.76a0qtrjcw.ttf",
+      "AssetFile": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\Shot.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1017860"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gW7PCUu5zJ2pctQDtEFsmAZOzsdlqNXL7SKY3KSBXw8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Sep 2021 13:24:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "76a0qtrjcw"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/Shot.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gW7PCUu5zJ2pctQDtEFsmAZOzsdlqNXL7SKY3KSBXw8="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/Shot.ttf",
+      "AssetFile": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\Shot.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1017860"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gW7PCUu5zJ2pctQDtEFsmAZOzsdlqNXL7SKY3KSBXw8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Sep 2021 13:24:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gW7PCUu5zJ2pctQDtEFsmAZOzsdlqNXL7SKY3KSBXw8="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/Undeveloped.4ths64fb7q.ttf",
+      "AssetFile": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\Undeveloped.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "203852"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LAJ5wcOgMmzPgd7r1JAXtoAqfVikZGAIbkrPQqZqKc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 04 Oct 2018 16:07:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4ths64fb7q"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/Undeveloped.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LAJ5wcOgMmzPgd7r1JAXtoAqfVikZGAIbkrPQqZqKc="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/Undeveloped.ttf",
+      "AssetFile": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\Undeveloped.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "203852"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LAJ5wcOgMmzPgd7r1JAXtoAqfVikZGAIbkrPQqZqKc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 04 Oct 2018 16:07:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LAJ5wcOgMmzPgd7r1JAXtoAqfVikZGAIbkrPQqZqKc="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/UndevelopedBook.ttf",
+      "AssetFile": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\UndevelopedBook.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198096"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CSmmpx2feCfj17hE4xIn3PHuOhPS8oI3v/vlOhAMT54=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 04 Oct 2018 16:09:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CSmmpx2feCfj17hE4xIn3PHuOhPS8oI3v/vlOhAMT54="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/UndevelopedBook.vqrag3nrpd.ttf",
+      "AssetFile": "C:\\Programovani\\CSharp\\MovieProject2\\MovieProject\\MovieProject\\wwwroot\\fonts\\UndevelopedBook.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198096"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CSmmpx2feCfj17hE4xIn3PHuOhPS8oI3v/vlOhAMT54=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 04 Oct 2018 16:09:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vqrag3nrpd"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/UndevelopedBook.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CSmmpx2feCfj17hE4xIn3PHuOhPS8oI3v/vlOhAMT54="
         }
       ]
     },

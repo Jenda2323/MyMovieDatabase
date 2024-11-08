@@ -8,36 +8,69 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MovieProject.styles.css" asp-append-version="true" />
     <style>
-        .navbar-brand-custom {
-            font-size: 2em;
-            background: linear-gradient(45deg, #ff6f00, #ff8e53, #fe6b8b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
+        @@font-face {
+            font-family: 'UndevelopedFont';
+            src: url('/fonts/Undeveloped.ttf') format('truetype');
         }
 
+        @@font-face {
+            font-family: 'Shot';
+            src: url('/fonts/Shot.ttf') format('truetype');
+        }
+
+        body {
+            background-image: url('/images/movie.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .navbar {
+            background-color: rgba(194, 183, 172) !important;
+        }
+
+        .navbar-brand-custom {
+            background: linear-gradient(45deg, #FFD700, #4B3D31, #000000); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;           
+            font-family: 'Shot';
+            text-align: center;
+            font-size:2rem;
+            
+            
+        }
+        
         .welcome-text {
             font-size: 1.5em;
             font-weight: bold;
             color: #007bff;
             margin-bottom: 20px;
+            
         }
 
         .container {
             text-align: center;
+            
         }
 
-        /* Remove border-top from footer */
-        .footer {
-            background-color: #f8f9fa; /* Light gray background */
-            padding: 20px 0;
-            text-align: center;
+        li {
+            font-family: 'Shot';
+            
         }
+
+        
+        footer {
+            padding: 5px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 >
             <div class="container-fluid">
                 <a class="navbar-brand navbar-brand-custom" asp-area="" asp-controller="Home" asp-action="Index">MyMovieDATABASE</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -76,6 +109,9 @@
         </main>
     </div>
 
+    <footer>
+        © 2024 - MovieProject 
+    </footer>
     
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

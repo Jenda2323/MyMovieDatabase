@@ -2,12 +2,75 @@
 @{
     ViewData["Title"] = "All Users";
 }
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Users List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @@font-face {
+            font-family: 'UndevelopedFont';
+            src: url('/fonts/Undeveloped.ttf') format('truetype');
+        }
 
-<div class="container mt-5">
-    <h1 class="text-center mb-4">All Users</h1>
+        .navbar {
+            background-color: rgba(194, 183, 172) !important;
+        }
+
+            .navbar .navbar-brand-custom {
+                font-size: 2rem;
+            }
+
+        .content {
+            flex: 1;
+            padding-bottom: 60px;
+            background-color: rgba(194, 183, 172, 0.95);
+            border-radius: 20px;
+            box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-family: 'UndevelopedFont';
+            font-size: 5rem;
+            text-align: center;
+            color: #333;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+        }
+
+        .btn-primary, .btn-danger {
+            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem;
+        }
+
+        .table {
+            background-color: rgba(220, 216, 202, 0.8);
+            border-radius: 10px;
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+            .table thead th {
+                font-size: 1.5rem;
+                font-family:'Baskerville Old Face';
+                color: #333;
+                background-color: rgba(220, 216, 202, 0.8);
+            }
+
+            .table tbody tr:hover {
+                background-color: rgba(220, 216, 202, 0.8);
+            }
+    </style>
+</head>
+<body>
+<div class="container content">
+    <h1> All Users</h1>
 
     <div class="d-flex justify-content-between mb-3">
-        <a asp-action="Create" class="btn btn-secondary">Create a User</a>
+        <a asp-action="Create" class="btn btn-info">Create a User</a>
         <div class="input-group w-25">
             <input type="text" class="form-control" id="searchInput" placeholder="Search Users">
         </div>
@@ -15,7 +78,7 @@
 
     <div class="table-responsive">
         <table class="table table-hover table-bordered text-center">
-            <thead class="thead-light">
+                <thead class="thead-dark">
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
@@ -32,7 +95,7 @@
                         <td>@user.Email</td>
                         <td>
                             <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@user.Id">Update</a>
-                            <form asp-action="Delete" asp-route-id="@user.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                            <form asp-action="Delete" asp-route-id="@user.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this user?');" class="d-inline">
                                 <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                             </form>
                         </td>
@@ -43,7 +106,7 @@
     </div>
 </div>
 
-@section Scripts {
+
     <script>
         document.getElementById('searchInput').addEventListener('keyup', function () {
             var input, filter, table, tr, td, i, txtValue;
@@ -69,13 +132,6 @@
             }
         });
     </script>
-}
 
-<style>
-    .table thead th {
-        background-color: #f8f9fa;
-    }
-    .table tbody tr:hover {
-        background-color: #f1f1f1;
-    }
-</style>
+</body>
+</html>

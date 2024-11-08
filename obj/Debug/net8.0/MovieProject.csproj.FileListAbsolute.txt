@@ -416,3 +416,4 @@ C:\Programovani\CSharp\MovieProject2\MovieProject\MovieProject\obj\Debug\net8.0\
 C:\Programovani\CSharp\MovieProject2\MovieProject\MovieProject\bin\Debug\net8.0\MovieProject.staticwebassets.endpoints.json
 C:\Programovani\CSharp\MovieProject2\MovieProject\MovieProject\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Programovani\CSharp\MovieProject2\MovieProject\MovieProject\obj\Debug\net8.0\staticwebassets\msbuild.MovieProject.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Programovani\CSharp\MovieProject2\MovieProject\MovieProject\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

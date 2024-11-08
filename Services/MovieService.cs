@@ -74,11 +74,24 @@ namespace MovieProject.Services
                                                                         
         }
         internal async Task DeleteAsync(int id)
-        {
+        {            
+            var ratingsToDelete = await _dbContext.Ratings.Where(r => r.Name.Id == id).ToListAsync();
+            if (ratingsToDelete.Any())
+            {
+                _dbContext.Ratings.RemoveRange(ratingsToDelete);
+            }
             var movieToDelete = await _dbContext.Movies.FirstOrDefaultAsync(movie => movie.Id == id);
-            
-            _dbContext.Movies.Remove(movieToDelete);
-            await _dbContext.SaveChangesAsync();
+
+            if (movieToDelete != null)
+            {
+                _dbContext.Movies.Remove(movieToDelete);
+                await _dbContext.SaveChangesAsync();
+            }
+            else
+            {
+                Console.WriteLine($"Movie with ID {id} not found.");
+            }
         }
+
     }
 }

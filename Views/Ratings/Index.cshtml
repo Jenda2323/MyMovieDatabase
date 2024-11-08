@@ -1,52 +1,143 @@
 ﻿@using MovieProject.ViewModels
 @model IEnumerable<RatingsViewModel>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ratings List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @@font-face {
+            font-family: 'UndevelopedFont';
+            src: url('/fonts/Undeveloped.ttf') format('truetype');
+        }
 
-<h1>Movie Rating List</h1>
+        @@font-face {
+            font-family: 'Shot';
+            src: url('/fonts/Shot.ttf') format('truetype');
+        }
 
-<div class="d-flex justify-content-between mb-3">
-    <a class="btn btn-info" asp-controller="Ratings" asp-action="Create">Rate Movie</a>
-    <div class="input-group w-50">
-        <input type="text" class="form-control" id="searchInput" placeholder="Search Movies">
-    </div>
-</div>
+        .navbar {
+            background-color: rgba(194, 183, 172) !important;
+        }
 
-<hr />
+        .navbar .navbar-brand-custom {
+                font-size: 2rem;
+        }
 
-<div class="row" id="movieList">
-    @foreach (var item in Model)
-    {
-        <div class="col-md-6 movie-item">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title"> @item.MovieName</h5>
-                    <p class="card-text">Rating: @item.AverageScore</p>
-                    <a href="@Url.Action("Update", "Ratings", new { id = item.Id })" class="btn btn-warning">Edit</a>
-                    <form method="post" action="@Url.Action("Delete", "Ratings", new { id = item.Id })" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this movie?')" ;>
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+        h1 {
+            font-family: 'UndevelopedFont';
+            font-size: 5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Shot';
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        .movie-item {
+            
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(194, 183, 172, 0.2);
+        }
+
+            .movie-item h5 {
+                font-family: 'Shot';
+                font-size: 1.5rem;
+                margin-bottom: 5px;
+                color: #333;
+            }
+
+            .movie-item p {
+                font-size: 1rem;
+                margin-bottom: 5px;
+            }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .card-body{
+            background-color: rgba(220, 216, 202, 0.8);
+            box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .content {
+            flex: 1;
+            padding-bottom: 60px;
+            background-color: rgba(194, 183, 172, 0.95);
+            border-radius: 20px;
+            box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <h1>Movie Rating List</h1>
+
+            <div class="d-flex justify-content-between mb-3">
+                <a class="btn btn-info" asp-controller="Ratings" asp-action="Create">Rate Movie</a>
+                <div class="input-group w-50">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search Movies">
                 </div>
             </div>
+
+            <hr />
+
+            <div class="row" id="movieList">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-6 movie-item">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title"> @item.MovieName</h5>
+                                <p class="card-text">Rating: @item.AverageScore</p>
+                                <div class="btn-container">
+                                    <a href="@Url.Action("Update", "Ratings", new { id = item.Id })" class="btn btn-warning">Edit</a>
+                                    <form method="post" action="@Url.Action("Delete", "Ratings", new { id = item.Id })" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this movie?');">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    }
-</div>
+    </div>
 
-<div class="d-flex justify-content-center">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-            </li>
-        </ul>
-    </nav>
-</div>
-
-@section Scripts {
     <script>
         document.getElementById('searchInput').addEventListener('keyup', function () {
             var input, filter, movieList, movieItems, title, i, txtValue;
@@ -68,4 +159,5 @@
             }
         });
     </script>
-}
+</body>
+</html>

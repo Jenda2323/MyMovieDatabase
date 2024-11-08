@@ -2,63 +2,135 @@
 @{
     ViewData["Title"] = "Edit Role";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update Role</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @@font-face {
+            font-family: 'UndevelopedFont';
+            src: url('/fonts/Undeveloped.ttf') format('truetype');
+        }
 
-<div class="container mt-4">
-    <h1>Edit Role</h1>
-    <a asp-action="Index" class="btn btn-secondary mb-3">Back</a>
+        .navbar {
+            background-color: rgba(194, 183, 172) !important;
+        }
 
-    <form method="post">
-        <input type="hidden" name="roleName" value="@Model.Role.Name" />
-        <input type="hidden" name="roleId" value="@Model.Role.Id" />
+            .navbar .navbar-brand-custom {
+                font-size: 2rem;
+            }
 
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title bg-info text-white p-2 mb-3">Add to @Model.Role.Name</h5>
-                <table class="table table-bordered">
-                    @if (Model.RoleNonMembers.Count() == 0)
-                    {
-                        <tr><td colspan="2">All users are members</td></tr>
-                    }
-                    else
-                    {
-                        @foreach (AppUser user in Model.RoleNonMembers)
-                        {
-                            <tr>
-                                <td>@user.UserName</td>
-                                <td>
-                                    <input type="checkbox" name="AddIds" value="@user.Id">
-                                </td>
-                            </tr>
-                        }
-                    }
-                </table>
-            </div>
+        body {
+            background-image: url('/images/movie.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px 30px 60px;
+            background-color: rgba(194, 183, 172, 0.95);
+            border-radius: 20px;
+            box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.8);
+            max-width: 800px;
+            margin: 50px auto;
+            border-color:black;
+        }
+
+        h1 {
+            font-family: 'UndevelopedFont';
+            font-size: 3rem;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            font-size: 1.5rem;
+            padding: 10px;
+            border-color: black;
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            border-color: black;
+        }
+        .card{
+            background-color: rgba(194, 183, 172, 0.95);
+            border-color: black;
+        }
+
+        .btn {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="content">
+            <h1>Edit Role</h1>
+            <a asp-action="Index" class="btn btn-secondary mb-3">Back</a>
+
+            <form method="post">
+                <input type="hidden" name="roleName" value="@Model.Role.Name" />
+                <input type="hidden" name="roleId" value="@Model.Role.Id" />
+
+                
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title bg-info text-white p-2 mb-3">Add to @Model.Role.Name</h5>
+                        <table class="table table-bordered">
+                            @if (Model.RoleNonMembers.Count() == 0)
+                            {
+                                <tr><td colspan="2">All users are members</td></tr>
+                            }
+                            else
+                            {
+                                @foreach (AppUser user in Model.RoleNonMembers)
+                                {
+                                    <tr>
+                                        <td>@user.UserName</td>
+                                        <td>
+                                            <input type="checkbox" name="AddIds" value="@user.Id">
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title bg-info text-white p-2 mb-3">Remove from @Model.Role.Name</h5>
+                        <table class="table table-bordered">
+                            @if (Model.RoleMembers.Count() == 0)
+                            {
+                                <tr><td colspan="2">No users are members</td></tr>
+                            }
+                            else
+                            {
+                                @foreach (AppUser user in Model.RoleMembers)
+                                {
+                                    <tr>
+                                        <td>@user.UserName</td>
+                                        <td>
+                                            <input type="checkbox" name="DeleteIds" value="@user.Id">
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </table>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
         </div>
+    </div>
+</body>
+</html>
 
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title bg-info text-white p-2 mb-3">Remove from @Model.Role.Name</h5>
-                <table class="table table-bordered">
-                    @if (Model.RoleMembers.Count() == 0)
-                    {
-                        <tr><td colspan="2">No users are members</td></tr>
-                    }
-                    else
-                    {
-                        @foreach (AppUser user in Model.RoleMembers)
-                        {
-                            <tr>
-                                <td>@user.UserName</td>
-                                <td>
-                                    <input type="checkbox" name="DeleteIds" value="@user.Id">
-                                </td>
-                            </tr>
-                        }
-                    }
-                </table>
-            </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary mt-3">Save</button>
-    </form>
-</div>
